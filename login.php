@@ -33,9 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION["user"] = $_SESSION["registered_name"];
 
-        // COOKIE (1 hour)
+        // COOKIE 
         setcookie("username", $_SESSION["registered_name"], time() + 3600);
-
         header("Location: dashboard.php");
         exit();
     }
@@ -73,4 +72,5 @@ if ($error != "") echo "<p class='error'>$error</p>";
 
 </div>
 </body>
+
 </html>
